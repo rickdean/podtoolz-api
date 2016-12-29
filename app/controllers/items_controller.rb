@@ -1,14 +1,16 @@
-class ItemsController < ApplicationController
-  def index
-    @items = Item.all
+class ItemsController < ProtectedController
+  before_action :set_item, only: [:show, :update, :destroy]
 
+  def index
+    # @items = Item.all
+    @items = Item.where(:user_id => current_user.id)
     render json: @items
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
-    render json: Item.find(params[:id])
+    render json: @item
   end
 
   # POST /items
@@ -46,6 +48,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:text)
+    params.require(:item).permit(:name, :price, :description, :category, :url)
   end
 end
