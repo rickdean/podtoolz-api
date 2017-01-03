@@ -59,11 +59,11 @@ curl --include --request POST http://localhost:4741/items \
 
 
   curl --include --request POST http://localhost:4741/items/ \
-  --header "Authorization: Token token=BAhJIiU4MmQ2ZDM5ZjM4ZTJhZDEyYzYxYTcxZDZmNGY1NTRhOQY6BkVG--641dec9d7e49b4c780bf03868e23c137dd268816" \
+  --header "Authorization: Token token=BAhJIiUxZDM2ZGM3ZGIyNDhiMDYxNjMxZjhiYTUxMjA3MjYzNwY6BkVG--8b433213a4c7f6857b9f5d1669ab869fa72a001c" \
   --header "Content-Type: application/json" \
   --data '{
     "item": {
-      "name": "Cool Software",
+      "name": "Software delete",
       "price": "$10.00",
       "description": "Really cool thing",
       "category": "software",
