@@ -48,6 +48,6 @@ class ItemsController < ProtectedController
   end
 
   def item_params
-    params.require(:item).permit(:name, :price, :description, :category, :url)
+    params.require(:item).permit(:name, :price, :description, :category, :url, :comment)
   end
 end
